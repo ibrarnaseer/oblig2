@@ -1,0 +1,73 @@
+import java.util.*; // Importering av verktøy.
+public class EnkelKalkulator { // Klassen.
+  public static void addere() { // Metoden for å addere.
+    System.out.println("\nDu valgte addisjon. \nSkriv inn to tall:\n");
+    // Tekst for å fortelle hva du valgte, og hvordan du skal gjøre dette.
+    Scanner in = new Scanner(System.in);
+    String innles;
+    int nummerEn, nummerTo; // Deklarasjoner
+
+    innles = in.nextLine();
+    nummerEn = Integer.parseInt(innles);
+
+    innles = in.nextLine();
+    nummerTo = Integer.parseInt(innles);
+    // For å lese inn to tall.
+    System.out.println("\nSum: " + (nummerEn + nummerTo));
+    // Printer ut summen av de to tallene.
+  }
+  public static void subtrahere() { // Metoden for å subtrahere.
+    System.out.println("\nDu valgte subtraksjon. \nSkriv inn to tall:\n");
+    Scanner in = new Scanner(System.in);
+    String innles;
+    int nummerEn, nummerTo; // Deklarasjoner.
+
+    innles = in.nextLine();
+    nummerEn = Integer.parseInt(innles);
+
+    innles = in.nextLine();
+    nummerTo = Integer.parseInt(innles);
+
+    System.out.println("\nDifferanse: " + (nummerEn / nummerTo));
+    // Printer ut differansen av de to tallene.
+  }
+  public static void multiplisere() { // Metoden for å multiplisere.
+    System.out.println("\nDu valgte multiplikasjon. \nSkriv inn to tall:\n");
+    Scanner in = new Scanner(System.in);
+    String innles;
+    int nummerEn, nummerTo;
+
+    innles = in.nextLine();
+    nummerEn = Integer.parseInt(innles);
+
+    innles = in.nextLine();
+    nummerTo = Integer.parseInt(innles);
+
+    System.out.println("\nProdukt: " + (nummerEn * nummerTo));
+    // Printer ut produktet av de to tallene.
+  }
+  public static void main (String [] args) { // Main koden.
+    Scanner in = new Scanner(System.in);
+    String innles;
+    int valg; // Deklarasjoner.
+
+    System.out.println("Velg en av følgende: ");
+    System.out.println("\n1. Addere");
+    System.out.println("2. Subtrahere");
+    System.out.println("3. Multiplisere");
+    // Printer ut tekst som lar deg velge hva du vil gjøre.
+
+    innles = in.nextLine();
+    valg = Integer.parseInt(innles); // Leser inn hva du valgte.
+
+    if (valg == 1) {
+      addere();
+    } // Hvis du valgte 1, sender deg til metoden addere();
+    else if (valg == 2) {
+      subtrahere();
+    } // Ellers hvis du valgte 2, sender deg til metoden subtrahere();
+    else if (valg == 3) {
+      multiplisere();
+    } // Ellers hvis du valgte 3, sender deg til metoden multiplisere();
+  }
+}
