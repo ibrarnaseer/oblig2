@@ -1,0 +1,32 @@
+import java.util.*; // Importerer verktøy
+public class FirstArray { // Klassen
+  public static void main (String[] args) { // Her begynner koden
+    int plass1 = 0;
+    int [] arrayTall = new int [4]; // Deklarasjoner
+    while (plass1<4) { // While-løkke for oppgave b
+      arrayTall[plass1] = plass1;
+      /* I array skal plass1 som er 0 bli fylt inn
+      med tallet for plass1, som også er 0 */
+      plass1++; // Får plass1 til å øke med 1
+    }
+    arrayTall[0] = arrayTall[3] = 1337;
+    // Bytter array plass 0 og 3 sitt tall til 1337
+    Scanner in = new Scanner (System.in);
+    String navn1, navn2, navn3, navn4, navn5;
+    int tall2 = 0;
+    String [] arrayNavn = new String [5]; // Deklarasjoner
+    System.out.println("Tast inn fem navn:\n");
+    /* Printer ut tekst for å fortelle brukeren
+    at h*n skal taste inn fem navn */
+    while (tall2<5) { // While-løkke for oppgave d
+      arrayNavn[tall2] = in.nextLine();
+      // Setter inn i array på tall2 sin plass (begynner på 0) input fra brukeren
+      tall2++;
+      /* Får tall2 til å øke med 1, slik at neste plass i array
+      blir 1 (plass 2, men array begynner på 0, derfor 1) */
+    }
+    System.out.println("\nInnhold i int-array:\n" + Arrays.toString(arrayTall));
+    System.out.println("\nInnhold i String-array:\n" + Arrays.toString(arrayNavn));
+    // Printer ut innholdet i begge arrayene
+  }
+}
