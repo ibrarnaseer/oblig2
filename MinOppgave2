@@ -1,0 +1,47 @@
+import java.util.*;
+public class MinOppgave2 {
+  static void heiNavn(String navn) {
+    System.out.println("\nHei " + navn + "!");
+  } // Metode som printer ut hei og navnet
+  static void alder(int alder) {
+  // Metode som sjekker om brukeren er yngre enn 18 eller eldre enn 29
+    if (alder < 18 || alder > 29) {
+      System.out.println("\nDu får ikke studentrabatt.");
+      // Printer ut at brukeren ikke får studentrabatt
+    }
+  }
+  static void svar(String svar) {
+  // Metode for å sjekke om brukeren tastet inn ja eller nei
+    if (svar.equalsIgnoreCase("nei")) {
+      System.out.println("\nDu får ikke studentrabatt.");
+      // Hvis nei, printer ut at brukeren ikke får studentrabatt
+    }
+    else if (svar.equalsIgnoreCase("ja")) {
+      System.out.println("\nFlott, du oppfyller kriteriene for studentrabatt.");
+      // Hvis ja, printer ut at brukeren oppfyller kravene for å få studentrabatt
+    }
+  }
+  public static void main (String[] args) { // Hovedkoden
+
+    Scanner in = new Scanner (System.in);
+    System.out.println("Vennligst tast inn navn:");
+    String navn;
+    navn = in.nextLine();
+    // Deklarasjoner og printer ut at brukeren skal taste inn navn
+    heiNavn(navn); // Sender til metoden for hei med navnet
+    System.out.println("\nVennligst tast inn alder: ");
+    String innles1;
+    int alder;
+    innles1 = in.nextLine();
+    alder = Integer.parseInt(innles1);
+    // Deklarasjoner og printer ut at brukeren skal taste inn alder
+    alder(alder);
+    // Sender til metoden for å sjekke alder
+    System.out.println("\nHar du betalt semesteravgift? Skriv Ja/Nei.");
+    String svar;
+    svar = in.nextLine();
+    // Deklarasjoner og printer ut om brukeren har betalt semesteravgift
+    svar(svar);
+    // Sender til metoden for å sjekke om brukeren tastet ja eller nei
+  }
+}
