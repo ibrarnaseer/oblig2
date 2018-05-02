@@ -1,0 +1,26 @@
+/* Jeg tolket oppgaven slik at brukeren
+skulle taste inn masse tall, og til
+slutt skulle summen av alle tallene
+brukeren tastet inn bli printet ut på skjermen. */
+
+import java.util.*; // Importerer verktøy
+public class SumTall {
+  public static void main (String[] args) {
+    Scanner in = new Scanner(System.in);
+    String innles;
+    int tall = 0;
+    int sum = 0; // Deklarasjoner
+    System.out.println("Tast inn tall:\n");
+    System.out.println("Tast inn 0 for å avslutte.\n");
+    // Printer ut for å fortelle hvordan du skal begynne
+    innles = in.nextLine();
+    tall = Integer.parseInt(innles); // For å lese inn tall fra brukeren
+    while (tall != 0) { // While-løkken begynner her
+      sum += tall; // Sum variablen skal plusses med tall variablen
+      innles = in.nextLine();
+      tall = Integer.parseInt(innles); // Lese inn tall fra brukeren
+    }
+    System.out.println("sum: " + sum);
+    // Printer ut summen av alle tallene brukeren har tastet inn
+  }
+}
